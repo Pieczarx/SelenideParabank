@@ -1,6 +1,7 @@
 package parabank.config.properties;
 
 import java.io.File;
+import java.util.Properties;
 
 public class ConstantValues {
     public final static String TEST_ENVIRONMENT = PropertiesHandler.getTestEnvironment();
@@ -16,6 +17,6 @@ public class ConstantValues {
     public final static String DATA_PATH = String.format(PropertiesHandler.getDataPath(), PROJECT_NAME, TEST_ENVIRONMENT.toUpperCase());
     public final static String DATA_USER_CREATION_PATH = String.format(PropertiesHandler.getUserCreationPath(), PROJECT_NAME, TEST_ENVIRONMENT.toUpperCase());
     public final static String USERS_PATH =  String.format(PropertiesHandler.getUsersPath(), PROJECT_NAME, TEST_ENVIRONMENT.toUpperCase());
-    public final static String USERS_DEFAULT_FILENAME =  PropertiesHandler.getUsersDefaultFileName();
+    public final static String USERS_DEFAULT_FILENAME = PropertiesHandler.getUsersDefaultFileName();
     public final static String ATTACHMENT_PATH =  String.format(PropertiesHandler.getAttachmentPath(), PROJECT_NAME);
 }
