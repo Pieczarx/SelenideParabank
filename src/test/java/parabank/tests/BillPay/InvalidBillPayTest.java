@@ -14,7 +14,7 @@ public class InvalidBillPayTest extends BaseTest {
         loginPage = new LoginPage(driver);
         loginPage.loginUser(standardUser.getUsername(), standardUser.getPassword());
     }
-    @Test(description = "TC01 - pusty formularz")
+    @Test(description = "TC01 - pusty formularz.")
     @Severity(SeverityLevel.BLOCKER)
     public void emptyFormTest() {
         billPayPage = new BillPayPage(driver);
