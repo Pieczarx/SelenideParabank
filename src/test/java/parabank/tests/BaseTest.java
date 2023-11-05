@@ -1,4 +1,6 @@
+
 package parabank.tests;
+
 
 import org.apache.commons.logging.Log;
 import org.openqa.selenium.WebDriver;
@@ -8,8 +10,7 @@ import org.testng.annotations.*;
 import parabank.model.PageElements;
 import parabank.model.User;
 import parabank.pages.*;
-import parabank.utils.DriverFactory;
-
+/*
 public class BaseTest {
 
     public static WebDriver driver;
@@ -87,3 +88,4 @@ public class BaseTest {
 //    }
 
 }
+*/

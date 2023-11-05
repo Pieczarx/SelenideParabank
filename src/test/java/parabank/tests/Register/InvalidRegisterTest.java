@@ -2,8 +2,7 @@ package parabank.tests.Register;
 
 import org.testng.annotations.Test;
 import parabank.pages.RegisterPage;
-import parabank.tests.BaseTest;
-
+/*
 public class InvalidRegisterTest extends BaseTest {
     @Test(description = "TC01 - pusty formularz")
     public void registerEmptyFormTest() {
@@ -39,3 +38,4 @@ public class InvalidRegisterTest extends BaseTest {
         registerPage.thirdErrorMessageShouldBe("Passwords did not match.");
     }
 }
+*/

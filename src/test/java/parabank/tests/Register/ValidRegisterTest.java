@@ -1,20 +1,29 @@
 package parabank.tests.Register;
 
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
-import org.testng.Assert;
-import org.testng.annotations.Test;
-import parabank.pages.RegisterPage;
-import parabank.tests.BaseTest;
+import parabank.Users.Users;
 
-public class ValidRegisterTest extends BaseTest {
-    @Test(description = "TC01: poprawna rejestracja")
-    @Severity(SeverityLevel.BLOCKER)
-    public void validRegister() {
-        //When
-        registerPage = new RegisterPage(driver);
-        String pageTitle = registerPage.registerAsValidUser(standardUser.getFirstName(), standardUser.getLastName(), standardUser.getAddress(), standardUser.getCity(), standardUser.getState(), standardUser.getZipCode(), standardUser.getPhone(), standardUser.getSsn(), standardUser.getUsername(), standardUser.getPassword(), standardUser.getPassword()).getPageTitle();
-        //Then
-        Assert.assertEquals(pageElements.getRegisterAccountTitle(standardUser.getUsername()), pageTitle);
+
+import com.codeborne.selenide.Condition;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import parabank.config.TestMain;
+import org.testng.annotations.Test;
+import parabank.pages.Pages;
+
+public class ValidRegisterTest extends TestMain {
+    private Users standardUser;
+    private void setUpTestUsers(){
+        standardUser = new Users("firstName", "lastName","address","city","state","zipCode", "phone","ssn","username","password","password");
+    }
+    @Override
+    @BeforeClass(alwaysRun = true)
+    public void beforeClass() throws Exception{
+        super.beforeClass();
+        setUpTestUsers();
+    }
+    @Test
+    public void validRegisterTest() {
+        Pages.registerPage.register(standardUser);
+        Pages.productPage.pageTitle.shouldBe(Condition.visible).shouldHave(Condition.text(standardUser.getUsername()));
     }
 }
