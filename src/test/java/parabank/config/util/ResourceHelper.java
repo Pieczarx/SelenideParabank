@@ -24,5 +24,10 @@ public class ResourceHelper {
         return new File(getResourceAsURI(relativePathToResource));
     }
 
+    @SneakyThrows
+    public static String getResourceAsString(String relativePathToResource) {
+        return Files.readFile(getResourceAsFile(relativePathToResource));
+    }
+
 
 }

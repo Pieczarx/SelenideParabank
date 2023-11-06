@@ -5,7 +5,6 @@ import parabank.Users.Users;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
-import parabank.model.User;
 
 import java.util.Arrays;
 import java.util.List;

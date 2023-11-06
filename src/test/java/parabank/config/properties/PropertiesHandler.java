@@ -14,9 +14,7 @@ public class PropertiesHandler {
     public static String getProjectName() {
         return getEnvironmentProperty("project.name");
     }
-    public static String getTestEnvironment() {
-        return getEnvironmentProperty("test.environment");
-    }
+
     public static String getTestUrl() {
         return getEnvironmentProperty("test.URL");
     }
@@ -37,31 +35,12 @@ public class PropertiesHandler {
         } else {
             return System.getProperty("user.dir");
         } }
-    public static String getDataPath() {
-        return getEnvironmentProperty("data.path");
-    }
 
-    public static String getUserCreationPath() {
-        return getEnvironmentProperty("data.userCreationPath");
-    }
-    public static String getAttachmentPath() {
-        return getEnvironmentProperty("attachment.path");
-    }
     public static String getSelenideRemote() {
         return getEnvironmentProperty("selenide.remote");
     }
 
-    public static String getUsersPath() {
-        return getEnvironmentProperty("users.path");
-    }
 
-    public static String getUsersDefaultFileName() {
-        return getEnvironmentProperty("users.defaultFilename");
-    }
-
-    public static Boolean getFileData() {
-        return Boolean.valueOf(getEnvironmentProperty("file.data"));
-    }
 
     @SneakyThrows
     private static String getEnvironmentProperty(String key) {

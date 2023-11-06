@@ -25,14 +25,13 @@ public class Users {
     String confirmPassword;
 
 
-
 //    @JsonIgnoreProperties(ignoreUnknown = true)
 //    @JsonPOJOBuilder(withPrefix = "")
 //    public static final class UserBuilder {
 //
 //    }
 
-    public Users (String firstName, String lastName, String address, String city, String state, String zipCode, String phone, String ssn, String username, String password, String confirmPassword) {
+    public Users(String firstName, String lastName, String address, String city, String state, String zipCode, String phone, String ssn, String username, String password, String confirmPassword) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
@@ -46,6 +45,8 @@ public class Users {
         this.confirmPassword = password;
 
     }
+}
+    /*
     public String getFirstName() {
         return firstName;
     }
@@ -80,3 +81,5 @@ public class Users {
         return password;
     }
 }
+*/
+
