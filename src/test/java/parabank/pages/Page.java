@@ -15,6 +15,9 @@ public class Page{
     public SelenideElement possibleError = $(By.className("error"));
 
     public SelenideElement pageTitle = $(By.className("title"));
+    private String loginAccountTitle() {
+        return "Accounts Overwiew";
+    }
 
 
 

@@ -51,6 +51,10 @@ public class RegisterPage extends Page {
         return new ProductPage();
     }
 
+    public RegisterPage clickBtn() {
+        registerBtn.shouldBe(Condition.enabled).click();
+        return new RegisterPage();
+    }
 }
 /*
     @Step
