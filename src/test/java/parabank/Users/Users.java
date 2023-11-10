@@ -42,7 +42,7 @@ public class Users {
         this.ssn = ssn;
         this.username = username;
         this.password = password;
-        this.confirmPassword = password;
+        this.confirmPassword = confirmPassword;
 
     }
 /*

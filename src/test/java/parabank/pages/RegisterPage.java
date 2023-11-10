@@ -1,11 +1,15 @@
 package parabank.pages;
 
+import com.codeborne.selenide.CollectionCondition;
+import com.codeborne.selenide.ElementsCollection;
+import org.testng.Assert;
 import pages.ProductPage;
 import parabank.Users.Users;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -28,12 +32,10 @@ public class RegisterPage extends Page {
     public SelenideElement confirmPasswordInput = $(By.id("repeatedPassword"));
     public SelenideElement registerLink = $x("//a[text()='Register']");
     public SelenideElement registerBtn = $x("//input[@value='Register']");
-    public SelenideElement errorMessage = $x("//span[@id='customer.lastName.errors']");
-    public SelenideElement secondErrorMessage = $(By.id("customer.username.errors"));
-    public SelenideElement thirdErrorMessage = $(By.id("repeatedPassword.errors"));
+    public SelenideElement lastNameErrorMessage = $x("//span[@id='customer.lastName.errors']");
+    public SelenideElement existedUsernameErrorMessage = $(By.id("customer.username.errors"));
+    public SelenideElement differentPasswordsErrorMessage = $(By.id("repeatedPassword.errors"));
     private List<String> fields = Arrays.asList("First name", "Last name", "Address", "City", "State", "Zip Code", "Social Security Number", "Username", "Password", "Password confirmation");
-
-
     public ProductPage register(Users user) {
         registerLink.shouldBe(Condition.enabled).click();
         firstNameInput.shouldBe(Condition.enabled).setValue(user.getFirstName());
@@ -50,10 +52,29 @@ public class RegisterPage extends Page {
         registerBtn.shouldBe(Condition.enabled).click();
         return new ProductPage();
     }
-
     public RegisterPage clickBtn() {
         registerBtn.shouldBe(Condition.enabled).click();
         return new RegisterPage();
+    }
+    public void lastNameErrorMessageShouldBeDisplayed() {
+        Assert.assertEquals(lastNameErrorMessage.shouldBe(Condition.visible).getText(), "Last name is required.");
+    }
+    public void existedUsernameErrorMessageShouldBeDisplayed() {
+        Assert.assertEquals(existedUsernameErrorMessage.shouldBe(Condition.visible).getText(), "This username already exists.");
+    }
+    public void differentPasswordsErrorMessageShouldBeDisplayed() {
+        Assert.assertEquals(differentPasswordsErrorMessage.shouldBe(Condition.visible).getText(), "Passwords did not match.");
+    }
+    public List<String> getErrorMessages() {
+        return possibleErrors.texts();
+    }
+    public void compareErrors (List<String> received) {
+        List<String> allErrors = new ArrayList<>();
+        for (String input : fields){
+            String element = input + " is required.";
+            allErrors.add(element);
+        }
+        Assert.assertEquals(allErrors, received);
     }
 }
 /*

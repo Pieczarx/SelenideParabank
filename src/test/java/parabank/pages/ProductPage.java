@@ -33,15 +33,4 @@ public class ProductPage extends Page {
 
     public SelenideElement backButton = $(By.className("inventory_details_back_button"));
     public SelenideElement shoppingCartItemsAmount = $(By.className("shopping_cart_badge"));
-
-
-
-
-
-
-
-
-
-
-
 }
