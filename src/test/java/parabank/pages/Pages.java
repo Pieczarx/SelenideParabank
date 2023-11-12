@@ -5,8 +5,8 @@ import pages.ProductPage;
 
 public class Pages {
     public static RegisterPage registerPage = new RegisterPage();
-
     public static LoginPage loginPage = new LoginPage();
+    public static ForgotLoginInfoPage forgotLoginInfoPage = new ForgotLoginInfoPage();
 
 }
 

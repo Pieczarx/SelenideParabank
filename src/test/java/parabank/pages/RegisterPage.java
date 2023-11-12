@@ -77,35 +77,3 @@ public class RegisterPage extends Page {
         Assert.assertEquals(allErrors, received);
     }
 }
-/*
-    @Step
-    public PageObjects registerAsValidUser (String firstName, String lastName, String address, String city, String state, String zipCode, String phone, String ssn, String username, String password, String confirmPassword) {
-        registerUser(firstName,lastName,address,city,state,zipCode,phone,ssn,username,password,confirmPassword);
-        return new PageObjects(driver);
-    }
-    @Step
-    public void errorMessageShouldBe(String expectedText) {
-        waitForTextInElement(waitForElement(errorMessage,5),expectedText,10);
-    }
-    @Step
-    public void secondErrorMessageShouldBe(String expectedText) {
-        waitForTextInElement(waitForElement(secondErrorMessage,5),expectedText,10);
-    }
-    @Step
-    public void thirdErrorMessageShouldBe(String expectedText) {
-        waitForTextInElement(waitForElement(thirdErrorMessage,5),expectedText,10);
-    }
-    public List<String> getErrorMessages() {
-        return waitForElements(possibleError, 10).stream().map(WebElement::getText).collect(Collectors.toList());
-    }
-    @Step
-    public void compareErrors (List<String> received) {
-        List<String> allErrors = new ArrayList<>();
-        for (String input : fields){
-            String element = input + " is required.";
-            allErrors.add(element);
-        }
-        Assert.assertEquals(allErrors, received);
-    }
-}
-*/
