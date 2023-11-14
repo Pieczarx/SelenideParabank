@@ -25,11 +25,11 @@ public class LoginPage extends Page {
         usernameInput.shouldBe(enabled).setValue(username);
         passwordInput.shouldBe(enabled).setValue(password);
         loginBtn.click();
-        return new LoginPage();
+        return this;
     }
     public LoginPage logOutUser () {
         logoutLink.shouldBe(enabled).click();
-        return new LoginPage();
+        return this;
     }
     public void loggedMessageShouldBeDisplayed() {
         Assert.assertEquals(pageTitle.shouldBe(Condition.visible).getText(), "Accounts Overview");
