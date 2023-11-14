@@ -20,7 +20,7 @@ public class ValidLogintest extends TestMain {
         super.beforeClass();
     }
 
-    @Test(description = "TC1: Prawidłowe logowanie")
+    @Test(description = "TC01: Prawidłowe logowanie")
     public void validLoginTest() {
         setUpTestUsers();
         String username = standardUser.getUsername();
@@ -28,5 +28,9 @@ public class ValidLogintest extends TestMain {
         Pages.loginPage.login(username, password);
         Pages.loginPage.loggedMessageShouldBeDisplayed();
 
+    }
+    @Test(description = "TC02: poprawne wylogowanie", dependsOnMethods = "validLoginTest")
+    public void validLogout() {
+        Pages.loginPage.logOutUser();
     }
 }

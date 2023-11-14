@@ -15,6 +15,7 @@ public class Page{
     public SelenideElement rightPanelMessage = $(By.xpath("//div[@id='rightPanel']//p[1]"));
     public SelenideElement requestLoanMessage = $(By.xpath("//div[@class='ng-scope']//p[1]"));
     public ElementsCollection possibleErrors = $$(By.className("error"));
+    public SelenideElement error = $(By.className("error"));
     public SelenideElement pageTitle = $(By.className("title"));
     private String loginAccountTitle() {
         return "Accounts Overwiew";
