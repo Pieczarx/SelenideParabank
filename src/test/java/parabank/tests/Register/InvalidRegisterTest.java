@@ -30,7 +30,6 @@ public class InvalidRegisterTest extends TestMain {
     @Test(description = "TC1: Pusty formularz")
     public void emptyFormTest() {
         Pages.registerPage.register(noData);
-        //Pages.registerPage.pageTitle.shouldBe(Condition.visible).shouldHave(Condition.text(noData.getUsername()));
         Pages.registerPage.compareErrors(Pages.registerPage.getErrorMessages());
     }
 

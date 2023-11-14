@@ -18,7 +18,6 @@ public class ForgotLoginInfoPage extends Page{
     public SelenideElement ssnInput = $(By.id("ssn"));
     public SelenideElement forgotLoginInfoLink = $(By.linkText("Forgot login info?"));
     public SelenideElement findMyLoginInfoBtn = $x("//input[@value='Find My Login Info']");
-    public SelenideElement emptyCityInputError = $(By.id("address.city.errors"));
     public ForgotLoginInfoPage forgotLoginInfo (Users user) {
         forgotLoginInfoLink.shouldBe(Condition.enabled).click();
         firstNameInput.shouldBe(Condition.enabled).setValue(user.getFirstName());

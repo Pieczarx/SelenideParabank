@@ -36,7 +36,7 @@ public class RegisterPage extends Page {
     public SelenideElement existedUsernameErrorMessage = $(By.id("customer.username.errors"));
     public SelenideElement differentPasswordsErrorMessage = $(By.id("repeatedPassword.errors"));
     private List<String> fields = Arrays.asList("First name", "Last name", "Address", "City", "State", "Zip Code", "Social Security Number", "Username", "Password", "Password confirmation");
-    public ProductPage register(Users user) {
+    public RegisterPage register(Users user) {
         registerLink.shouldBe(Condition.enabled).click();
         firstNameInput.shouldBe(Condition.enabled).setValue(user.getFirstName());
         lastNameInput.shouldBe(Condition.enabled).setValue(user.getLastName());
@@ -50,7 +50,7 @@ public class RegisterPage extends Page {
         passwordInput.shouldBe(Condition.enabled).setValue(user.getPassword());
         confirmPasswordInput.shouldBe(Condition.enabled).setValue(user.getConfirmPassword());
         registerBtn.shouldBe(Condition.enabled).click();
-        return new ProductPage();
+        return this;
     }
     public RegisterPage clickBtn() {
         registerBtn.shouldBe(Condition.enabled).click();

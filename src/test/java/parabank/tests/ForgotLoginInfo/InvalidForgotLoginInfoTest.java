@@ -30,6 +30,5 @@ public class InvalidForgotLoginInfoTest extends TestMain {
     public void badSsnTest() {
         Pages.forgotLoginInfoPage.forgotLoginInfo(badSsn);
         Pages.registerPage.rightPanelMessage.shouldBe(Condition.visible).shouldHave(Condition.text("The customer information provided could not be found."));
-        System.out.println(Pages.registerPage.rightPanelMessage.text());
     }
 }
