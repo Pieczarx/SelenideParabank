@@ -30,4 +30,5 @@ public class ValidTransferFundsTest {
         Pages.transferFundsPage.transfer();
 
     }
+
 }
