@@ -8,6 +8,7 @@ public class Pages {
     public static LoginPage loginPage = new LoginPage();
     public static ForgotLoginInfoPage forgotLoginInfoPage = new ForgotLoginInfoPage();
     public static OpenNewAccountPage openNewAccountPage = new OpenNewAccountPage();
+    public static TransferFundsPage transferFundsPage = new TransferFundsPage();
 
 }
 
