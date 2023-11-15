@@ -23,7 +23,7 @@ public class TransferFundsPage extends Page {
     public SelenideElement secondAccount() {
         return $("#toAccountId");
     }
-    public void selectAccounts() {
+    public void selectAccount() {
         SelenideElement fromAccountSelect = firstAccount();
         fromAccountSelect.selectOption(0);
 
@@ -36,7 +36,7 @@ public class TransferFundsPage extends Page {
        amountInput.clear();
        String amount = "100";
        amountInput.setValue(amount);
-       selectAccounts();
+       selectAccount();
        transferInput.click();
        sleep(2000);
        return this;
@@ -47,7 +47,7 @@ public class TransferFundsPage extends Page {
         amountInput.clear();
         String amount = "abc";
         amountInput.setValue(amount);
-        selectAccounts();
+        selectAccount();
         transferInput.click();
         sleep(2000);
         return this;

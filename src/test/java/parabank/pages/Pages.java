@@ -10,6 +10,7 @@ public class Pages {
     public static OpenNewAccountPage openNewAccountPage = new OpenNewAccountPage();
     public static TransferFundsPage transferFundsPage = new TransferFundsPage();
     public static BillPayPage billPayPage = new BillPayPage();
+    public static FindTransactionsPage findTransactionsPage = new FindTransactionsPage();
 
 }
 
