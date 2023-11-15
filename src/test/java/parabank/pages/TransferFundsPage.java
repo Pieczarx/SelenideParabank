@@ -41,7 +41,21 @@ public class TransferFundsPage extends Page {
        sleep(2000);
        return this;
     }
+    public TransferFundsPage transferWithInvalidAmount(){
+        transferFundsLink.click();
+        sleep(2000);
+        amountInput.clear();
+        String amount = "abc";
+        amountInput.setValue(amount);
+        selectAccounts();
+        transferInput.click();
+        sleep(2000);
+        return this;
+    }
     public void completedTransferMessageShouldBeDisplayed() {
         Assert.assertEquals(pageTitle.shouldBe(Condition.visible).getText(), "Transfer Complete!");
+    }
+    public void invalidAmountMessage() {
+        Assert.assertEquals(errorMessage.shouldBe(Condition.visible).getText(), "Please enter a valid amount.");
     }
 }
