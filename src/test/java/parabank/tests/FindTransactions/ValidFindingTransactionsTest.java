@@ -33,17 +33,17 @@ public class ValidFindingTransactionsTest extends TestMain{
     }
     @Test(description = "TC02: poprawnie znalezienie transakcji po dacie")
     public void validFindingByDate() {
-        Pages.findTransactionsPage.findTransactionbyDate();
+        Pages.findTransactionsPage.findTransactionByDate();
         Pages.findTransactionsPage.foundTransactionMessage();
     }
     @Test(description = "TC03: poprawnie znalezienie transakcji po zakresie dat")
     public void validFindingByDateRange() {
-        Pages.findTransactionsPage.findTransactionbyDateRange();
+        Pages.findTransactionsPage.findTransactionByDateRange();
         Pages.findTransactionsPage.foundTransactionMessage();
     }
     @Test(description = "TC04: poprawnie znalezienie transakcji po kwocie")
     public void validFindingByAmount() {
-        Pages.findTransactionsPage.findTransactionbyAmount();
+        Pages.findTransactionsPage.findTransactionByAmount();
         Pages.findTransactionsPage.foundTransactionMessage();
     }
 

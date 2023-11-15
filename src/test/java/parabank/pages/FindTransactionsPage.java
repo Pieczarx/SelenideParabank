@@ -41,7 +41,7 @@ public class FindTransactionsPage extends Page {
         transactionByIdInput.click();
         sleep(2000);
     }
-    public void findTransactionbyDate()
+    public void findTransactionByDate()
     {
         findTransactionsLink.click();
         sleep(2000);
@@ -52,7 +52,7 @@ public class FindTransactionsPage extends Page {
         transactionByDateInput.click();
         sleep(2000);
     }
-    public void findTransactionbyDateRange()
+    public void findTransactionByDateRange()
     {
         findTransactionsLink.click();
         sleep(2000);
@@ -65,7 +65,7 @@ public class FindTransactionsPage extends Page {
         transactionByDateRangeInput.click();
         sleep(2000);
     }
-    public void findTransactionbyAmount()
+    public void findTransactionByAmount()
     {
         findTransactionsLink.click();
         sleep(2000);
@@ -76,8 +76,22 @@ public class FindTransactionsPage extends Page {
         transactionByAmountInput.click();
         sleep(2000);
     }
+    public void findTransactionByInvalidID()
+    {
+        findTransactionsLink.click();
+        sleep(2000);
+        selectAccount();
+        transactionByID.clear();
+        String id = "asd";
+        transactionByID.setValue(id);
+        transactionByIdInput.click();
+        sleep(2000);
+    }
     public void foundTransactionMessage() {
         Assert.assertEquals(pageTitle.shouldBe(Condition.visible).getText(), "Transaction Results");
+    }
+    public void invalidIdMessage() {
+        Assert.assertEquals(error.shouldBe(Condition.visible).getText(), "An internal error has occurred and has been logged.");
     }
 
 
