@@ -11,19 +11,6 @@ public class Pages {
     public static TransferFundsPage transferFundsPage = new TransferFundsPage();
     public static BillPayPage billPayPage = new BillPayPage();
     public static FindTransactionsPage findTransactionsPage = new FindTransactionsPage();
-
-}
-
-    /*public static LoginPage loginPage = new LoginPage();
-    public static FindTransactionsPage findTransactionsPage = new FindTransactionsPage();
-
-    public static BillPayPage billPayPage = new BillPayPage();
-
-    public static ForgotLoginInfoPage forgotLoginInfoPage = new ForgotLoginInfoPage();
-    public static OpenNewAccountPage openNewAccountPage = new OpenNewAccountPage();
     public static RequestLoanPage requestLoanPage = new RequestLoanPage();
-    public static TranferFundsPage tranferFundsPage = new TranferFundsPage();
-    public static UpdateContactInfoPage updateContactInfoPage = new UpdateContactInfoPage();
-
 }
-*/
+
