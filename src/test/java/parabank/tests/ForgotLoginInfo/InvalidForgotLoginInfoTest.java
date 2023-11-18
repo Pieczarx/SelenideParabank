@@ -21,14 +21,14 @@ public class InvalidForgotLoginInfoTest extends TestMain {
         super.beforeClass();
         setUpTestUsers();
     }
-    @Test(description = "TC1: Pusty formularz")
+    @Test(description = "TC1: Puste pole city")
     public void nullCityTest() {
         Pages.forgotLoginInfoPage.forgotLoginInfo(noCityData);
-        Pages.registerPage.possibleErrors.shouldHave(CollectionCondition.texts("City is required."));
+        Pages.forgotLoginInfoPage.possibleErrors.shouldHave(CollectionCondition.texts("City is required."));
     }
     @Test(description = "TC2: Bledny ssn")
     public void badSsnTest() {
         Pages.forgotLoginInfoPage.forgotLoginInfo(badSsn);
-        Pages.registerPage.rightPanelMessage.shouldBe(Condition.visible).shouldHave(Condition.text("The customer information provided could not be found."));
+        Pages.forgotLoginInfoPage.rightPanelMessage.shouldBe(Condition.visible).shouldHave(Condition.text("The customer information provided could not be found."));
     }
 }
