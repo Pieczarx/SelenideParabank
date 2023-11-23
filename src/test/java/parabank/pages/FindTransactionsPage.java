@@ -36,7 +36,7 @@ public class FindTransactionsPage extends Page {
         sleep(2000);
         selectAccount();
         transactionByID.clear();
-        String id = "15475";
+        String id = "14476";
         transactionByID.setValue(id);
         transactionByIdInput.click();
         sleep(2000);

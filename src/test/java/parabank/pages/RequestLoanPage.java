@@ -5,20 +5,18 @@ import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.sleep;
+import static com.codeborne.selenide.Selenide.*;
 
 public class RequestLoanPage extends Page {
     public SelenideElement requestLoanLink = $(By.linkText("Request Loan"));
-    public SelenideElement loadAmountInput = $(By.cssSelector("input[id='amount']"));
-    public SelenideElement downPaymentInput = $(By.cssSelector("input[id='downPayment']"));
-    public SelenideElement requestInput = $(By.cssSelector("input[type='submit']"));
+    public SelenideElement loadAmountInput = $x("//input[@id='amount']");
+    public SelenideElement downPaymentInput = $x("//input[@id='downPayment']");
+    public SelenideElement requestInput = $x("//input[@type='submit']");
     public SelenideElement secondErrorMessage = $(By.cssSelector("p[class='error ng-scope']"));
     public SelenideElement requestLoanMessage = $("div.ng-scope p", 0);
     public SelenideElement accountInput() {
-        return $("#accountId");
+        return $(By.id("fromAccountId"));
     }
-
     public void selectAccount() {
         SelenideElement accountSelect = accountInput();
         accountSelect.selectOption(0);

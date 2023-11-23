@@ -11,5 +11,4 @@ public class Pages {
     public static FindTransactionsPage findTransactionsPage = new FindTransactionsPage();
     public static RequestLoanPage requestLoanPage = new RequestLoanPage();
     public static UpdateContactInfoPage updateContactInfoPage = new UpdateContactInfoPage();
-
 }

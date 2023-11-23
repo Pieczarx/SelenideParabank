@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test">
+    <test name="Test">
+        <classes>
+            <class name="parabank.tests.Register.ValidRegisterTest" />
+            <class name="parabank.tests.Register.InvalidRegisterTest" />
+            <class name="parabank.tests.LoginAndlogout.ValidLogintest" />
+            <class name="parabank.tests.LoginAndlogout.InvalidLoginTest" />
+            <class name="parabank.tests.ForgotLoginInfo.InvalidForgotLoginInfoTest" />
+            <class name="parabank.tests.ForgotLoginInfo.ValidForgotLoginInfoTest" />
+            <class name="parabank.tests.OpenNewAccount.ValidOpenNewAccountTest" />
+            <class name="parabank.tests.TransferFunds.ValidTransferFundsTest" />
+            <class name="parabank.tests.TransferFunds.InvalidTransferFundsTest" />
+            <class name="parabank.tests.BillPay.ValidBillPayTest" />
+            <class name="parabank.tests.BillPay.InvalidBillPayTest" />
+            <class name="parabank.tests.FindTransactions.ValidFindingTransactionsTest" />
+            <class name="parabank.tests.FindTransactions.InvalidFindingTransactionsTest" />
+            <class name="parabank.tests.UpdateContactInfo.ValidUpdateContactInfoTest" />
+            <class name="parabank.tests.UpdateContactInfo.InvalidUpdateContactInfoTest" />
+            <class name="parabank.tests.RequestLoan.ValidRequestLoanTest" />
+            <class name="parabank.tests.RequestLoan.InvalidRequestLoanTest" />
+        </classes>
+    </test>
+</suite>
